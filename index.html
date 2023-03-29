@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/main.css">
+    <style>
+        .box1, .box2, .box4, .box5{
+            border-right:2px solid white;
+            border-bottom:2px solid white;
+        }
+
+        .box3, .box6{
+            border-bottom: 2px solid white;
+        }
+
+        .box7, .box8{
+            border-right:2px solid white;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width:100%;
+            aspect-ratio: 1/1;
+            cursor: pointer;
+            font-size: 3rem;
+            color:white;
+        }
+        .btn{
+            display: none;
+        }
+        .btn.active{
+            display: flex;
+        }
+
+        .win{
+            background-color: rgba(0, 255, 0, 0.3);
+        }
+        .loss{
+            background-color: #FF0000;
+        }
+    </style>
+</head>
+<body>
+    <img src="" alt="">
+    <!-- Wrapper -->
+    <div class="relative bg-[url('/assets/gradient-bg.jpg')] w-[100vw] h-[100vh] flex flex-col items-center justify-evenly" >
+        <!-- Turn checker -->
+        <p class="absolute top-14 text-white bg-grey-blur py-[0.5rem] px-[3rem] rounded-lg border-[1px] border-grey-border turn">  </p>
+
+        <!-- game-box -->
+        <div class="absolute top-48 text-white bg-grey-blur grid grid-cols-3 grid-rows-3 w-[90%] border-grey-border
+                 p-[2rem] aspect-square max-w-[20rem] rounded-3xl border-[1px]">
+            <div class="box1 box"></div>
+            <div class="box2 box"></div>
+            <div class="box3 box"></div>
+            <div class="box4 box"></div>
+            <div class="box5 box"></div>
+            <div class="box6 box"></div>
+            <div class="box7 box"></div>
+            <div class="box8 box"></div>
+            <div class="box9 box"></div>
+        </div>
+
+        <!-- New Game Button -->
+        <button class="absolute bottom-14 text-white bg-grey-blur py-[0.5rem] px-[3rem] rounded-lg border-[1px]
+             border-grey-border btn">New Game</button>
+    </div>
+    <script src="/index.js"></script>
+</body>
+</html>
